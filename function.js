@@ -41,6 +41,9 @@ submitButton.addEventListener("click", async () => {
         loadingIndicator.style.display = "none";
     }
 });
+
+
+
 /*function seleccionarTexto() {
   const elemento = document.querySelector(".insertText");
   if (!elemento) {

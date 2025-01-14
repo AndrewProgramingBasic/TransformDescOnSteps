@@ -64,6 +64,7 @@ body {
     margin-top: 20px;
     font-style: italic;
     color: #888;
+    flex-basis: 100%
 }
 
 /* Animación opcional (ejemplo simple) */
