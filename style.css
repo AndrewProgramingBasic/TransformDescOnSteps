@@ -1,0 +1,80 @@
+body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra el contenido principal */
+    font-family: sans-serif; /* Fuente más legible */
+    margin: 20px; /* Margen general para separar del borde */
+    background-color: #f4f4f4; /* Un fondo sutil */
+}
+
+.insertedText, .insertText {
+    width: 45%; /* Ancho relativo para adaptarse a diferentes pantallas */
+    min-height: 200px; /* Altura mínima para evitar que se colapsen */
+    box-sizing: border-box; /* Incluye padding y border en el ancho */
+    padding: 10px;
+    border: 1px solid #ccc; /* Borde suave */
+    margin-bottom: 20px; /* Espacio entre los elementos */
+    resize: vertical; /* Permite redimensionar verticalmente */
+    overflow: auto; /* Agrega scrollbar si el contenido se desborda */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Sombra suave */
+
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+.insertText {
+    background-color: #fff; /* Fondo blanco para mejor contraste */
+    white-space: pre-wrap; /*Respeta los saltos de linea*/
+}
+
+.buttonBox {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; /* Espacio debajo del botón */
+}
+
+.miBotonCopiar {
+    padding: 10px 20px;
+    background-color: #007bff; /* Azul moderno */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición suave al pasar el mouse */
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Sombra suave */
+}
+
+.miBotonCopiar:hover {
+    background-color: #0056b3; /* Azul más oscuro al pasar el mouse */
+}
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .insertedText, .insertText {
+        width: 95%; /* Ocupan casi todo el ancho en pantallas pequeñas */
+    }
+}
+
+/* Estilos para el indicador de carga */
+.loading-indicator {
+    display: none; /* Oculto por defecto */
+    text-align: center;
+    margin-top: 20px;
+    font-style: italic;
+    color: #888;
+}
+
+/* Animación opcional (ejemplo simple) */
+.loading-indicator::after {
+    content: "...";
+    animation: dots 1s steps(3, end) infinite;
+}
+
+@keyframes dots {
+    0%, 20% { content: ""; }
+    40% { content: "."; }
+    60% { content: ".."; }
+    80%, 100% { content: "..."; }
+}
