@@ -1,6 +1,6 @@
 const inputText = document.querySelector(".insertedText");
 const insertText = document.querySelector(".insertText");
-const submitButton = document.querySelector(".miBotonCopiar");
+const submitButton = document.querySelector(".procesigButton");
 const loadingIndicator = document.getElementById("loading"); // Obtener el indicador de carga
 
 submitButton.addEventListener("click", async () => {
